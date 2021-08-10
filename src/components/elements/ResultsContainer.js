@@ -10,7 +10,7 @@ const Results = ({ locationZip }) => {
         fetchRequests = [];
 
     useEffect(() => {
-        fetch("http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" + locationZip)
+        fetch("https://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" + locationZip)
             .then((response) => response.json())
             .then(async (data) => {
                 if ((data.results[0].id === "Error") || !data)
@@ -28,7 +28,7 @@ const Results = ({ locationZip }) => {
                     marketName[i] = splitString.join(" ")
                     idKey[i] = data.results[i].id
 
-                    await fetch("http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + idKey[i])
+                    await fetch("https://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + idKey[i])
                         .then((response) => {
                             return response.json();
                         }).then((detaildata) => {
