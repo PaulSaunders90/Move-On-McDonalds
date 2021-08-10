@@ -39,27 +39,31 @@ const Results = ({ locationZip }) => {
                                 detailsKey: idKey[i] + "d",
                                 address: detaildata.marketdetails.Address,
                                 link: detaildata.marketdetails.GoogleLink,
-                                produce: detaildata.marketdetails.Products.replaceAll(';', '.'),
-                                schedule: detaildata.marketdetails.Schedule.replaceAll("<br>", "").substr(25,).replaceAll(";", "  ")
+                                produce: detaildata.marketdetails.Products.replaceAll(';', '. '),
+                                schedule: detaildata.marketdetails.Schedule.replaceAll("<br>", "").substr(25,).replaceAll(";", `. `)
                             }
                             resultsData.push(resultObj)
                         })
                 };
+                resultsData = resultsData.filter((resultObj, index, self) =>
+                    index === self.findIndex((o) => (
+                        o.resultsName === resultObj.resultsName && o.address === resultObj.address
+                    )))
                 fetchRequests.push(resultsData)
                 await Promise.all(fetchRequests)
                 setResults(fetchRequests[0])
             }).catch((error) => console.log(error))
     }, [locationZip, fetchRequests]);
 
-    function flipCard(e){
-        if((e.parentNode.className === "datacard" || e.parentNode.className === "datacard is-flipped") && e.className !== "link"){
+    function flipCard(e) {
+        if ((e.parentNode.className === "datacard" || e.parentNode.className === "datacard is-flipped") && e.className !== "link") {
             e.parentNode.classList.toggle("is-flipped");
-        } else if((e.parentNode.parentNode.className === "datacard"  || e.parentNode.parentNode.className === "datacard is-flipped") && e.className !== "link"){
+        } else if ((e.parentNode.parentNode.className === "datacard" || e.parentNode.parentNode.className === "datacard is-flipped") && e.className !== "link") {
             e.parentNode.parentNode.classList.toggle("is-flipped");
-        } else if((e.parentNode.parentNode.className === "datacard"  || e.parentNode.parentNode.parentNode.className === "datacard is-flipped") && e.className !== "link"){
+        } else if ((e.parentNode.parentNode.className === "datacard" || e.parentNode.parentNode.parentNode.className === "datacard is-flipped") && e.className !== "link") {
             e.parentNode.parentNode.parentNode.classList.toggle("is-flipped");
         }
-    } 
+    }
 
     return (
         <ResultsContainer>
@@ -71,7 +75,7 @@ const Results = ({ locationZip }) => {
                 {locationResults.map(result => (
                     <div className="card">
                         <div className="datacard" key={result.resultsKey}
-                        onClick={event => flipCard(event.target)}>
+                            onClick={event => flipCard(event.target)}>
                             <div className="resultimage"></div>
                             <span className="resultname">{result.resultsName}</span>
                             <div className="resultdetailsfront">
