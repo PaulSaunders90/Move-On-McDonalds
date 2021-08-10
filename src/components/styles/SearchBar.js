@@ -4,10 +4,10 @@ export const SearchWrapper = styled.div`
 
 #wrapper{
   background-color:#5DAA68;
-  border:solid 1px black;
   margin:auto;
   padding:1em;
   width:360px;
+  border-radius: 10px;
 }
 @media(min-width: 500px){
   #wrapper{
@@ -50,6 +50,9 @@ export const SearchWrapper = styled.div`
       background-color: #5DAA68;
       &:nth-child(odd) {
         background-color:#3F6844;
+      }
+      .address{
+        margin-right: 1em;
       }
       span {
         display:inline-block;

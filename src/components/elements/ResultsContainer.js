@@ -52,7 +52,6 @@ const Results = ({ locationZip }) => {
     }, [locationZip, fetchRequests]);
 
     function flipCard(e){
-        console.log(e.className)
         if((e.parentNode.className === "datacard" || e.parentNode.className === "datacard is-flipped") && e.className !== "link"){
             e.parentNode.classList.toggle("is-flipped");
         } else if((e.parentNode.parentNode.className === "datacard"  || e.parentNode.parentNode.className === "datacard is-flipped") && e.className !== "link"){
