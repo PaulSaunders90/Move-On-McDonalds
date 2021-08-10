@@ -56,6 +56,9 @@ export const SearchWrapper = styled.div`
         font-size: 14px;
         width:6em;
       }
+      span:nth-child(2){
+        width:7em;
+      }
       span:nth-child(3){
         width:3em;
       }
