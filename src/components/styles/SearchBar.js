@@ -54,10 +54,10 @@ export const SearchWrapper = styled.div`
       span {
         display:inline-block;
         font-size: 14px;
-        width:6em;
+        width:5em;
       }
       span:nth-child(2){
-        width:7em;
+        width:8em;
       }
       span:nth-child(3){
         width:3em;
