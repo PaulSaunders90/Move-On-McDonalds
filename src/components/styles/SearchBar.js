@@ -7,7 +7,13 @@ export const SearchWrapper = styled.div`
   border:solid 1px black;
   margin:auto;
   padding:1em;
-  width:500px;
+  width:360px;
+}
+@media(min-width: 500px){
+  #wrapper{
+      width: 500px;
+  }
+}
   form{
     position: relative;
   }

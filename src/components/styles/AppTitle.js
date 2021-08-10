@@ -6,8 +6,13 @@ export const AppTitle = styled.div`
         padding:1em;
         margin-bottom: 0;
         padding-bottom: 0;
-        width:500px;
+        width:360px;
         text-align: center;
         font-size: 20px;
         font-weight: bold;
+}
+@media(min-width: 500px){
+    #searchtitle{
+        width: 500px;
+    }
 }`
