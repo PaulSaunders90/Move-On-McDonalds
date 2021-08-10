@@ -54,10 +54,18 @@ export const SearchWrapper = styled.div`
       span {
         display:inline-block;
         font-size: 14px;
-        width:9em;
+        width:6em;
       }
       span:nth-child(3){
-        width:5em;
+        width:3em;
+      }
+      @media(min-width: 500px){
+        span {
+          width:9em;
+        }
+        span:nth-child(3){
+          width:5em;
+        }
       }
     }
 }`
