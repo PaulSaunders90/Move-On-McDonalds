@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { AppWrapperStyle } from "../styles/AppWrapper"
 
 import Title from "../elements/AppTitle";
@@ -15,7 +15,7 @@ const AppWrapper = () => {
             <div id="appwrapper">
                 <Title />
                 <Search setZip={setZip} />
-                <Results locationZip={locationZip}/>
+                <Results locationZip={locationZip} />
             </div>
         </AppWrapperStyle>
     )
