@@ -49,6 +49,8 @@ export const CardStyle = styled.div`
     border-top-right-radius: 10px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-perspective: 0;
+    visibility:visible;
 }
 .resultimage{
     height: 200px;
@@ -59,6 +61,8 @@ export const CardStyle = styled.div`
     border-top-left-radius: 10px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-perspective: 0;
+    visibility:visible;
 }
 .link{
     text-decoration: none;
@@ -103,6 +107,8 @@ export const CardStyle = styled.div`
     position: absolute;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-perspective: 0;
+    visibility:visible;
 }
 .address{
     font-size: 16px;
