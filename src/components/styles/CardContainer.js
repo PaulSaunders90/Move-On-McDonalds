@@ -10,7 +10,6 @@ export const CardStyle = styled.div`
     width: 100%;
     height: 400px;
     margin: 10px;
-    perspective: 600px;
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -30,6 +29,9 @@ export const CardStyle = styled.div`
     border-radius: 10px;
     transition: transform 1s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    perspective: 1000;
+    -webkit-perspective: 1000;
 }
 .datacard.is-flipped{
     transform: rotateY(180deg);
@@ -49,7 +51,6 @@ export const CardStyle = styled.div`
     border-top-right-radius: 10px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 0;
     visibility:visible;
 }
 .resultimage{
@@ -60,8 +61,7 @@ export const CardStyle = styled.div`
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 0;
+    backface-visibility: hidden
     visibility:visible;
 }
 .link{
