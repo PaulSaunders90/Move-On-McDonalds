@@ -22,7 +22,6 @@ export const CardStyle = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    background-color:#5DAA68;
     display: inline-block;
     vertical-align: middle;
     border: 1px solid grey;
@@ -100,15 +99,16 @@ export const CardStyle = styled.div`
 .resultdetailsfront{
     height: calc(100% - 200px);
     width: 100%;
-    margin-top: 5px;
     text-align: center;
     font-size: 14px;
     padding: 5px;
+    padding-top: 10px;
     position: absolute;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 0;
-    visibility:visible;
+    background-color:#5DAA68;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .address{
     font-size: 16px;
@@ -118,12 +118,16 @@ export const CardStyle = styled.div`
     width: 100%;
     height: 100%;
     top: 0;
-    margin-top: 5px;
     text-align: center;
     font-size: 14px;
     padding: 5px;
+    padding-top: 10px;
     position: absolute;
     transform: rotateY(180deg);
+    background-color:#5DAA68;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
 }
 .detail{
     margin: 5px;
