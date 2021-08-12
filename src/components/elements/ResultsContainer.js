@@ -13,11 +13,14 @@ const Results = ({ locationZip }) => {
         fetchRequests = [];
 
     function requestLocations() {
+        hasLoaded(false)
         fetch("https://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" + locationZip)
             .then((response) => response.json())
             .then(async (data) => {
-                if ((data.results[0].id === "Error") || !data)
-                    return;
+                if ((data.results[0].id === "Error") || !data){
+                setResults([])
+                setTimeout(hasLoaded(true), 4000)
+                };
 
                 let resultObj = {},
                     idKey = [],
@@ -56,14 +59,12 @@ const Results = ({ locationZip }) => {
                 fetchRequests.push(resultsData)
                 await Promise.all(fetchRequests)
                 setResults(fetchRequests[0])
-                hasLoaded(true)
+                setTimeout(hasLoaded(true), 4000)
             }).catch((error) => console.log(error))
     };
 
     useEffect(() => {
-        hasLoaded(false)
-        setResults([])
-        requestLocations();
+        requestLocations()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [locationZip]);
 
@@ -80,7 +81,6 @@ const Results = ({ locationZip }) => {
                      :
                     <div id="resultsheader">{"Fetching Data..."}</div>
                 }
-                {console.log(loaded)}
                 {locationResults.map(result => <Card result={result} key={result.resultsKey} />)}
             </div>
         </ResultsContainer >

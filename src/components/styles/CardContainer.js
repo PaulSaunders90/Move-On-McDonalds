@@ -72,16 +72,16 @@ export const CardStyle = styled.div`
 .link:hover{
     text-decoration: underline;
 }
-.card:nth-of-type(1n) .resultimage{
+&:nth-of-type(1n) .resultimage{
     background-image: url(${image1});
 }
-.card:nth-of-type(2n) .resultimage{
+&:nth-of-type(2n) .resultimage{
     background-image: url(${image2});
 }
-.card:nth-of-type(3n) .resultimage{
+&:nth-of-type(3n) .resultimage{
     background-image: url(${image3});
 }
-.card:nth-of-type(4n) .resultimage{
+&:nth-of-type(4n) .resultimage{
     background-image: url(${image4});
 }
 .resultdistance{
@@ -127,3 +127,4 @@ export const CardStyle = styled.div`
     font-weight: bold;
     margin-bottom: 5px;
 }`
+
