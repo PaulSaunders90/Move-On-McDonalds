@@ -17,6 +17,12 @@ const AppWrapper = () => {
                 <Search setZip={setZip} />
                 <Results locationZip={locationZip} />
             </div>
+            <div class="footer">
+                <div id="footertext">
+                    <p>Website designed by <a href="https://github.com/PaulSaunders90/">Paul Saunders</a>
+                        © 2021</p>
+                </div>
+            </div>
         </AppWrapperStyle>
     )
 };
