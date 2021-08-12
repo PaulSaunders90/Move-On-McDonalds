@@ -47,10 +47,12 @@ export const CardStyle = styled.div`
     font-size: 14px;
     font-weight: bold;
     padding: 5px;
+    padding-right: 3px;
     transition-duration: .1s;
     border-top-right-radius: 10px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transform:translate3d(0,0,0);
 }
 .resultimage{
     height: 200px;
