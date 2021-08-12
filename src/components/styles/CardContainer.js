@@ -50,7 +50,6 @@ export const CardStyle = styled.div`
     border-top-right-radius: 10px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    visibility:visible;
 }
 .resultimage{
     height: 200px;
@@ -60,8 +59,7 @@ export const CardStyle = styled.div`
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden
-    visibility:visible;
+    backface-visibility: hidden;
 }
 .link{
     text-decoration: none;
@@ -95,6 +93,8 @@ export const CardStyle = styled.div`
     padding: 5px;
     border-radius: 5px;
     transition-duration: .1s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 .resultdetailsfront{
     height: calc(100% - 200px);
