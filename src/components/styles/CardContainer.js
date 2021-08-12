@@ -25,7 +25,7 @@ export const CardStyle = styled.div`
     display: inline-block;
     vertical-align: middle;
     border: 1px solid grey;
-    border-radius: 10px;
+    border-radius: 12px;
     transition: transform 1s;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
